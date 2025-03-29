@@ -1,9 +1,8 @@
 - 👋 Hi, This is @GOOCO-Dev
 - 👀 We ara interested in Data Science and Artificail Intelligence
 
-##SDG 13: Climate Action
-#  Selected Challenge: Deforestation and its impact on Uganda’s environment and climate 
-resilience.
+#SDG 13: Climate Action
+#  Selected Challenge: Deforestation and its impact on Uganda’s environment and climate resilience.
 
 a. Clear Explaination of the Problem
   Deforestation in Uganda is a significant issue contributing to environmental degradation, loss 
