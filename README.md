@@ -104,30 +104,39 @@ To implement the solution algorithmically, we will follow these steps:
 
 e. Pseudocode
   function DetectDeforestation(image_before, image_after, threshold_value):
-     // Step 1: Preprocess the images (convert to grayscale, normalize)
+  
+  // Step 1: Preprocess the images (convert to grayscale, normalize)
      image_before = Normalize(ConvertToGrayscale(image_before))
      image_after = Normalize(ConvertToGrayscale(image_after))
-     // Step 2: Perform image differencing to highlight changes
+     
+  // Step 2: Perform image differencing to highlight changes
      difference_image = SubtractImages(image_after, image_before)
-     // Step 3: Apply PCA to reduce dimensionality and focus on significant changes
+     
+  // Step 3: Apply PCA to reduce dimensionality and focus on significant changes
      pca_image = ApplyPCA(difference_image)
-     // Step 4: Apply thresholding to isolate significant changes (deforestation)
+     
+  // Step 4: Apply thresholding to isolate significant changes (deforestation)
      deforestation_map = ApplyThreshold(pca_image, threshold_value)
-     // Step 5: Post-processing: Morphological operations to clean the result
+     
+  // Step 5: Post-processing: Morphological operations to clean the result
      deforestation_map = MorphologicalOperations(deforestation_map)
      return deforestation_map
      function ApplyPCA(image):
-     // Apply Principal Component Analysis (PCA) to reduce dimensionality
-     // Return the PCA components that capture significant changes
+     
+  // Apply Principal Component Analysis (PCA) to reduce dimensionality
+  // Return the PCA components that capture significant changes
      return PCA(image)
      function SubtractImages(image1, image2):
-     // Pixel-wise subtraction of the two images
+     
+  // Pixel-wise subtraction of the two images
      return image1 - image2
      function ApplyThreshold(image, threshold):
-     // Apply threshold to classify deforested regions
+     
+  // Apply threshold to classify deforested regions
      return image > threshold
      function MorphologicalOperations(image):
-     // Apply erosion and dilation to refine the boundaries of the detected areas
+     
+  // Apply erosion and dilation to refine the boundaries of the detected areas
      return Erosion(Dilation(image))
      
 f. Runtime Complexity of the Algorithm
